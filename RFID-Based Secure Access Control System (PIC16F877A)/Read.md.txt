@@ -1,0 +1,119 @@
+# RFID-Based Secure Access Control System (PIC16F877A)
+
+An embedded system project that simulates an RFID door access control system using a PIC16F877A microcontroller.
+The system verifies a user UID entered through UART (simulating RFID card scanning), displays authentication status on an LCD, and controls a servo motor acting as a door lock.
+
+---
+
+## Project Overview
+
+This project demonstrates how authentication systems work in embedded security devices.
+Instead of using a physical RFID reader, the UID is entered through a virtual terminal in simulation.
+
+When the correct UID is detected:
+
+* The LCD shows **Access Granted**
+* The servo motor unlocks the door
+* After a delay, the door locks again
+
+If the UID is incorrect:
+
+* The LCD shows **Access Denied**
+
+---
+
+## Features
+
+* UART-based RFID UID simulation
+* 16x2 LCD user interface
+* Servo motor door lock mechanism
+* Access authentication logic
+* Proteus-based system simulation
+* Embedded C firmware for PIC16F877A
+
+---
+
+## Hardware Components
+
+* PIC16F877A Microcontroller
+* 16x2 LCD Display
+* Servo Motor (SG90)
+* 20 MHz Crystal Oscillator
+* Virtual Terminal (RFID UID simulation)
+* Power Supply (5V)
+
+---
+
+## Software Tools
+
+* MPLAB X IDE
+* XC8 Compiler
+* Proteus Design Suite
+
+---
+
+## System Working
+
+1. System powers on and LCD displays:
+
+Scan Card
+
+2. User enters UID through terminal.
+
+Example valid UID:
+
+1234
+
+3. Microcontroller compares UID with stored value.
+
+4. If UID is correct:
+
+LCD → Access Granted
+Servo → Unlocks door
+
+5. After a short delay:
+
+Servo → Locks door again
+LCD → Returns to Scan Card
+
+---
+
+## Project Structure
+
+RFID-Access-Control-PIC16F877A
+
+firmware/
+
+* main.c
+
+proteus/
+
+* rfid_access_control.pdsprj
+* simulation files
+
+circuit/
+
+* circuit_diagram.png
+
+docs/
+
+* project_report.pdf
+
+README.md
+
+---
+
+## Future Improvements
+
+* EEPROM storage for multiple RFID cards
+* Buzzer for security alerts
+* Multiple failed-attempt lockout
+* Real RFID reader module (MFRC522)
+* Hardware PWM-based servo control
+
+---
+
+## Author
+
+Embedded Systems Project
+Robotics and Automation Engineering
