@@ -1,0 +1,31 @@
+# Build & Binary Output
+*.hex
+*.elf
+*.bin
+*.o
+*.d
+*.obj
+*.out
+*.map
+
+# IDE & Editor Temporary Files
+.pio/
+.vscode/
+.idea/
+*.swp
+*.bak
+*.orig
+*~
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python Caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+*.log
